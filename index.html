@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Evoke Audition</title>
+  <link rel="icon" type="images/png" href="./assets/images/Evoke orig.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google font Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+  <!--Google font Rubik  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <!-- Google font Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+
+
+  <!-- update the version number as needed -->
+  <!-- <script defer src="/__/firebase/8.6.2/firebase-app.js"></script>-->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/8.6.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.6.2/firebase-performance.js"></script>-->
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- The core Firebase JS SDK is always required and must be listed first-->
+  <!-- <script src="/__/firebase/8.6.2/firebase-app.js"></script> -->
+
+
+
+
+
+  <!-- Initialize Firebase -->
+  <!-- <script src="/__/firebase/init.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script> -->
+
+
+
+
+  <!-- <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
+
+  <!-- <script src="scripts/auth.js"></script> -->
+  <!-- <script src="scripts/index.js"></script> -->
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
+      #message {
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
+      }
+
+      body {
+        border-top: 16px solid #ffa100;
+      }
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+</head>
+
+<body style="border-top: 0;background-image: url('./assets/images/b1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+">
+  <!--  ><div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>-->
+
+
+
+  <!-- Background image -->
+  <div class="bg-image">
+
+    <div class="container-sm">
+
+
+
+
+      <header>
+        <!-- Jumbotron -->
+        <div class="p-5 text-center">
+          <h1 class="mb-1" style="font-family: 'Rubik', serif; font-size:  350%; color:   #1F1926;">TEAM EVOKE</h1>
+          <hr style="width: 20%;font-style: bold;">
+          <p>Kumaraguru Institutions</p>
+          <!-- <h2 class="mb-3" style=" font-family: 'Montserrat', serif; color: #1F1926; font-size:   150%; " >
+    <strong>To watch us dance is to hear our heart speak</strong></h2>-->
+          <h6 class="mb-3" style=" font-family: 'Montserrat', serif; color: #1F1926; font-size:   150%;   ">
+            <strong>To watch us dance is to hear our heart speak.<br>Ignite your dancing flame with us.❤</strong>
+          </h6><br>
+          <!-- <button type="button" class="btn btnh btn-outline-dark  px-3" data-mdb-ripple-color="dark"
+            style="background-color:#5D20C0;color: white;">
+            About Us</button> -->
+          <button type="button" class="btn btnh btn-outline-dark  px-3" data-mdb-ripple-color="dark"
+            style="background-color:#5D20C0;color: white;" onclick="members()">
+            About Us
+          </button>
+          <script type="text/javascript">
+            function members() {
+              window.open("members.html", "_self");
+            }
+          </script>
+        </div>
+        <!-- Jumbotron -->
+      </header>
+      <div class="row p-5">
+        <div class="col-md-6 ">
+          <div class="text-center">
+            <img class="img-fluid" src="./assets/images/Evoke orig.png" style="height: 250px;width: 250px;">
+          </div>
+        </div>
+        <div class="col-md-6 p-5 text-center pb-0">
+          <!-- <div>
+        <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
+      <p class="mb-3">MDB Team</p>
+          <a 
+            class="btn btn-primary btn-lg"
+            href="https://mdbootstrap.com/docs/standard/getting-started/"
+            target="_blank"
+            role="button"
+            >Register</a>
+       </div> 
+    </div> -->
+          <!-- Jumbotron -->
+          <div class="text-center" style="color:black;">
+            <h2 class="mb-3" style="font-family: 'Rubik', serif; font-size:  250%;">Audition 21</h2>
+            <h1 class="mb-3" style=" font-family: 'Montserrat', serif; color: #1F1926; font-size:  130%;"><strong>LogIn
+                to Register</strong></h1>
+            <!-- <a class="btn btn-primary btn-lg" href="form.html" role="button">LogIn</a>-->
+            <a href="form.html"></a><button type="button" class="btn btnh btn-outline-dark  px-3"
+              data-mdb-ripple-color="dark" onclick=" msftSignInPopup()" style="background-color:#5D20C0;color: white;">
+              Login</button></a>
+
+          </div>
+          <!-- Jumbotron -->
+        </div>
+      </div>
+      <!-- End your project here-->
+      <!-- <footer class="pb-3" style="background-color: rgba(0,0,0,0.6 );  "  >  
+     <!-- Jumbotron -->
+      <!-- <div class="p-5 text-center" style="color:  #3C4043"  >
+    <h1 class="mb-3">Heading</h1>
+    <h4 class="mb-3">Subheading</h4>
+    <a class="btn btn-primary" href="" role="button">Call to action</a>
+  </div>
+</footer>-->
+      <!-- Jumbotron -->
+      <footer class=" text-center text-white pt-5" style="background-color: rgba(0,0,0,0.8);">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Setion: Social media -->
+          <section class="mb-4 pb-2">
+            <h5 class="pb-4" style=" font-family: 'Montserrat', serif;">Follow us on</h4>
+              <!-- Facebook -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/TeamEvokeKCT"
+                target="_blank" role="button"><i class="fab fa-facebook-f"></i>
+              </a>
+
+              <!-- Twitter -->
+              <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/evoke_family" target="_blank"
+                role="button">
+                <i class="fab fa-twitter"></i></a>
+
+
+
+              <!-- Instagram -->
+              <a class="btn btn-outline-light btn-floating m-1"
+                href="https://instagram.com/team_evoke?utm_medium=copy_link" target="_blank" role="button"><i
+                  class="fab fa-instagram"></i></a>
+
+              <!-- Instagram -->
+              <a class="btn btn-outline-light btn-floating m-1"
+                href="https://www.youtube.com/channel/UCo6WNDei9ckEtol5ZZmaIhg" target="_blank" role="button"><i
+                  class="fab fa-youtube"></i></a>
+
+
+          </section>
+          <!-- Section: Social media -->
+          <div>
+            <!-- <i class="fas fa-phone-square fa-lg"> -->
+            <p style=" font-family: 'Montserrat', serif;"><strong>Contact</strong< /p><br>
+                <p>Abissek 9487584054</p>
+                <p style="font-family: 'Montserrat' serif;">Dimple Kanna 6379701882</p>
+          </div>
+        </div>
+        <!-- Section: Form -->
+        <section class="">
+          <form method="POST" onsubmit="return false;">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2" style=" font-family: 'Montserrat', serif;">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="subscription" class="form-control" placeholder="Email" />
+
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4" onclick="subscribe()">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+        <!-- Grid container -->
+      </footer>
+    </div>
+  </div>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/8.8.1/firebase-app.js"></script>
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/8.8.1/firebase-auth.js"></script>
+  <script src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      userState();
+    };
+    function userState() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          const authUser = firebase.auth().currentUser;
+          console.log('demo');
+          const displayName = authUser.displayName;
+          const email = authUser.email;
+          const createAt = firebase.firestore.FieldValue.serverTimestamp();
+          const uid = authUser.uid;
+          const photoURL = authUser.photoURL;
+          firebase.firestore().collection('users').where("uid", "==", uid).get()
+            .then((querySnapshot) => {
+              if (querySnapshot.docs.length == 0) {
+                firebase.firestore().collection('users').doc(uid).set({
+                  photoURL: photoURL,
+                  displayName: displayName,
+                  email: email,
+                  createAt: createAt,
+                  uid: uid
+                }).then(() => {
+                  console.log('s');
+                  window.location = "/form.html";
+                });
+              } else {
+                window.location = '/form.html';
+                console.log('no');
+              }
+            })
+            .catch((error) => {
+              console.log("Error getting documents: ", error);
+            });
+        }
+      });
+    }
+    function msftSignInPopup(provider) {
+      var provider = new firebase.auth.OAuthProvider('microsoft.com');
+      // [START auth_msft_signin_popup]
+      provider.setCustomParameters({
+        // Optional "tenant" parameter in case you are using an Azure AD tenant.
+        // eg. '8eaef023-2b34-4da1-9baa-8bc8c9d6a490' or 'contoso.onmicrosoft.com'
+        // or "common" for tenant-independent tokens.
+        // The default value is "common".
+        tenant: '6b8b8296-bdff-4ad8-93ad-84bcbf3842f5', domain_hint: 'kct.ac.in'
+      });
+      firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+          // IdP data available in result.additionalUserInfo.profile.
+          // ...
+
+          /** @type {firebase.auth.OAuthCredential} */
+          var credential = result.credential;
+
+          // OAuth access and id tokens can also be retrieved:
+          var accessToken = credential.accessToken;
+          var idToken = credential.idToken;
+        })
+        .catch((error) => {
+          // Handle error.
+        });
+      // [END auth_msft_signin_popup]
+    }
+
+    function subscribe() {
+      console.log('running');
+      const email = document.getElementById('subscription').value;
+      firebase.firestore().collection('subscriptions').add({
+        email: email
+      });
+      alert('Subscribed successfully');
+      document.getElementById('subscription').value=null;
+    }
+  </script>
+</body>
+</html>

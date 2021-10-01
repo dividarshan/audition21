@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Evoke Audition</title>
+  <link rel="icon" type="images/png" href="./assets/images/Evoke orig.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+
+  <!--Google font Rubik  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <!-- Google font Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+
+
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+  ​
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./assets/css/form.css">
+
+</head>
+
+<body>
+
+
+  <!-- Intro settings -->
+  <style>
+    /* Default height for small devices */
+    #intro-example {
+      height: 400px;
+    }
+
+    /* Height for devices larger than 992px */
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 600px;
+
+      }
+    }
+  </style>
+
+  <!-- Navbar -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="d-flex justify-content-start" style="padding-right: 0;width: 50%;height: 50%;">
+            <img src="../assets/images/Evokesvg.svg"
+              style="width: 50%; padding-bottom: 3%; padding-top: 3%; padding-right: 3%;">
+          </li>
+          <!-- <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#" style=" font-family: 'Montserrat', serif;">Members</a>
+          </li> -->
+          <li class="nav-item active">
+            <a class="nav-link" href="members.html" style=" font-family: 'Montserrat', serif;">About Us</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#" style=" font-family: 'Montserrat', serif;" onclick="signout()">Logout</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <!-- Jumbotron -->
+  <!-- <style>
+  .videoContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  /* optional */
+  width: 100%;
+  height: 100%; 
+}
+  </style> -->
+  <div>
+    <div class=" align-items-center p-5 text-center "
+      style="height: 50vh; background-color:#845EC2;margin-top: 1%;color: white; ">
+      <h1 class="pt-5" style="margin:0;">Welcome to Audition 2021</h1><br></br>
+      <h4 class="mb-2" style="margin: 0;">Register below</h4><br>
+      <div><button type="submit" class="btn btn-primary mb-2" onclick="playVideo()"><i
+            class="fas fa-video">&nbsp;&nbsp;&nbsp;</i>How to register</button></div>
+      <div id="containerVideo" hidden>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/Od6hY_50Dh0?autoplay=1" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <!--   -->
+      <script>
+        function playVideo() {
+          console.log('video display');
+          document.getElementById('containerVideo').hidden = false;
+        }
+      </script>
+    </div>
+  </div>
+  </div>
+  <!-- Jumbotron -->
+
+  <div>
+    <h2 class="d-flex justify-content-center pt-5">Registration</h2>
+  </div>
+  <div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup()">×</div>
+      <h1 style="font-size: 125%;font-family: 'Montserrat',serif;">Rules and Regulations</h1>
+      <!-- <p style="background-color: white;"> -->
+      <ul style="background-color: white; text-align:left">
+        <li>Participants are allowed to do solo performances only.</li>
+        <li>.Any style of dance can be performed.</li>
+        <li>Duration must be within 2 minutes.</li>
+        <li>Shoot the video in a single stretch without editing in landscape mode.</li>
+        <li> Avoid vulgarity in the video/music/- costume.</li>
+        <li>Audio editing is allowed.</li>
+        <li>The judgement criteria is only based on the performance.</li>
+        <li>Participants who violate the rules and regulations will be disqualified.</li>
+      </ul>
+      <!-- </p> -->
+    </div>
+  </div>
+  <div class="d-flex justify-content-center"><button type="button" class="btn btn-info btn-rounded"
+      onclick="togglePopup()">Rules and regulations</button>
+  </div>
+  <div id="formState" style="display:none;">
+    <div class="container" style="padding:5%;">
+      <form action="#" method="POST" onsubmit="return false;">
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="fullName" class="form-control border" disabled required />
+              <!-- <label class="form-label" for="form3Example1">Full name</label> -->
+            </div>
+          </div>
+          <!-- <div class="col">
+          <div class="form-outline">
+            <input type="text" id="form3Example2" class="form-control border" required />
+            <label class="form-label" for="form3Example2">Last name</label>
+          </div>
+        </div> -->
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="emailAddress" class="form-control border" disabled required />
+          <!-- <label class="form-label" for="form3Example3">Email address</label> -->
+        </div>
+
+        <!-- Roll number -->
+        <div class="form-outline mb-4">
+          <input type="text" id="rollNumber" class="form-control border" pattern="[0-9]{2}[A-Z]{3}[0-9]{3}\b"
+            required />
+          <label class="form-label" id="rollLabel" for="form3Example4">Roll Number</label>
+        </div>
+
+        <!-- Number -->
+        <div class="form-outline mb-4">
+          <input type="tel" id="phoneNumber" class="form-control border" required pattern="[0-9]{10}"
+            placeholder="Digits only(eg: 890XXXXXXX)" />
+          <label class="form-label" for="form3Example4">WhatsApp no</label>
+        </div>
+
+
+        <!-- Department -->
+        <!-- <div class="form-outline mb-4">
+        <input type="text" id="form3Example5" class="form-control border" required />
+        <label class="form-label" for="form3Example4">Department</label>
+      </div> -->
+
+
+        <!-- Department -->
+        <div class="form-outline mb-4">
+          <!-- <input type="text" id="form3Example5" class="form-control border" required /> -->
+          <select class="form-control border" id="departmentOfStudy" required>
+            <option disabled selected style="color: grey;">Programme</option>
+            <option value="Aeronautical Engineering">UG - Aeronautical Engineering</option>
+            <option value="Artificial Intelligence & Data Science">UG - Artificial Intelligence & Data Science</option>
+            <option value="Automobile Engineering">UG - Automobile Engineering</option>
+            <option value="Biotechnology">UG - Biotechnology</option>
+            <option value="Computer Science and Engineering">UG - Computer Science and Engineering</option>
+            <option value="Electrical and Electronics Engineering">UG - Electrical and Electronics Engineering</option>
+            <option value="Electronics and Communication Engineering">UG - Electronics and Communication Engineering
+            </option>
+            <option value="Electronics and Instrumentation Engineering">UG - Electronics and Instrumentation Engineering
+            </option>
+            <option value="Information Science and Engineering">UG - Information Science and Engineering</option>
+            <option value="Information Technology">UG - Information Technology</option>
+            <option value="Mechanical Engineering">UG - Mechanical Engineering</option>
+            <option value="Mechatronics Engineering">UG - Mechatronics Engineering</option>
+            <option value="School of Foundational Sciences">UG - School of Foundational Sciences</option>
+            <option value="Textile Technology">UG - Textile Technology</option>
+            <option value="Apparel Technology">PG - Apparel Technology</option>
+            <option value="Biotechnology">PG - Biotechnology</option>
+            <option value="Communication Systems">PG - Communication Systems</option>
+            <option value="Computer Science and Engineering">PG - Computer Science and Engineering</option>
+            <option value="Construction Management">PG - Construction Management</option>
+            <option value="Data Sciences">PG - Data Sciences</option>
+            <option value="Embedded Systems Technologies">PG - Embedded Systems Technologies</option>
+            <option value="Environmental Engineering">PG - Environmental Engineering</option>
+            <option value="Industrial Engineering">PG - Industrial Engineering</option>
+            <option value="Master of Computer Applications">PG - Master of Computer Applications</option>
+            <option value="MBA">PG - MBA</option>
+            <option value="MBA in Innovation, Entrepreneurship">PG - MBA in Innovation, Entrepreneurship</option>
+            <option value="Structural Engineering">PG - Structural Engineering</option>
+            <option value="Technology Management">PG - Technology Management</option>
+            <option value="Biotechnology">Research - Biotechnology</option>
+            <option value="Civil Engineering">Research - Civil Engineering</option>
+            <option value="Computer Science and Engineering">Research - Computer Science and Engineering</option>
+            <option value="Electrical and Electronics Engineering">Research - Electrical and Electronics Engineering
+            </option>
+            <option value="Electronics and Communication Engineering">Research - Electronics and Communication
+              Engineering
+            </option>
+            <option value="Fashion Technology">Research - Fashion Technology</option>
+            <option value="MBA">Research - MBA</option>
+            <option value="Mechanical Engineering">Research - Mechanical Engineering</option>
+            <option value="Textile Technology">Research - Textile Technology</option>
+            <option value="BACHELOR IN Business Administration">KCLAS (UG) - BACHELOR IN Business Administration
+            </option>
+            <option value="BACHELOR IN Commerce (Professional Accounting)">KCLAS (UG) - BACHELOR IN Commerce
+              (Professional
+              Accounting)</option>
+            <option value="BACHELOR IN Commerce">KCLAS (UG) - BACHELOR IN Commerce</option>
+            <option value="BACHELOR OF SCIENCE IN Data Science">KCLAS (UG) - BACHELOR OF SCIENCE IN Data Science
+            </option>
+            <option value="BACHELOR OF SCIENCE IN Mathematics">KCLAS (UG) - BACHELOR OF SCIENCE IN Mathematics</option>
+            <option value="BACHELOR OF SCIENCE IN Psychology">KCLAS (UG) - BACHELOR OF SCIENCE IN Psychology</option>
+            <option value="BACHELOR OF ARTS IN English Literature">KCLAS (UG) - BACHELOR OF ARTS IN English Literature
+            </option>
+            <option value="BACHELOR OF SCIENCE IN Visual Communication">KCLAS (UG) - BACHELOR OF SCIENCE IN Visual
+              Communication</option>
+            <option value="B.A Political Science">KCLAS (UG) - B.A Political Science</option>
+            <option value="BACHELOR OF ARTS IN Economics">KCLAS (UG) - BACHELOR OF ARTS IN Economics</option>
+            <option value="BACHELOR IN BUSINESS ADMINISTRATION (IB)">KCLAS (UG) - BACHELOR IN BUSINESS ADMINISTRATION
+              (IB)
+            </option>
+            <option value="Master of Social Work (MSW)">KCLAS (PG) - Master of Social Work (MSW)</option>
+            <option value="Diploma in Journalism">KCLAS (Diploma) - Diploma in Journalism</option>
+            <option value="Diploma in Design Thinkingy">KCLAS (Diploma) - Diploma in Design Thinking</option>
+            <option value="Diploma in Positive Psychology">KCLAS (Diploma) - Diploma in Positive Psychology</option>
+            <option value="Diploma in Data Analytics">KCLAS (Diploma) - Diploma in Data Analytics</option>
+            <option value="Diploma in Bharatanatyam">KCLAS (Diploma) - Diploma in Bharatanatyam</option>
+            <option value="Certificate in Campus Sustainability">KCLAS (Certificate Prog) - Certificate in Campus
+              Sustainability</option>
+
+          </select>
+          <!-- <label class="form-label" id="yearLabel" for="form3Example4">Year Of Study</label> -->
+          <script type="text/javascript">
+            function Validate() {
+              var yearOfStudy = document.getElementById("yearOfStudy");
+              if (yearOfStudy.value == "") {
+                //If the "Please Select" option is selected display error.
+                alert("Please select an option!");
+                return false;
+              }
+              return true;
+            }
+          </script>
+        </div>
+
+        <!-- Department -->
+        <div class="form-outline mb-4">
+          <!-- <input type="text" id="form3Example5" class="form-control border" required /> -->
+          <select class="form-control border" id="yearOfStudy" required>
+            <option disabled selected>Year Of Study</option>
+            <option value="1">1 year</option>
+            <option value="2">2 year</option>
+            <option value="3">3 year</option>
+            <option value="4">4 year</option>
+          </select>
+          <!-- <label class="form-label" id="yearLabel" for="form3Example4">Year Of Study</label> -->
+          <script type="text/javascript">
+            function Validate() {
+              var yearOfStudy = document.getElementById("yearOfStudy");
+              if (yearOfStudy.value == "") {
+                //If the "Please Select" option is selected display error.
+                alert("Please select an option!");
+                return false;
+              }
+              return true;
+            }
+          </script>
+        </div>
+
+        <!-- One-Drive link -->
+        <div class="form-outline mb-4">
+          <input type="link" id="oneDriveLink" class="form-control border" required />
+          <label class="form-label" for="form3Example6">Submission Link</label>
+        </div>
+
+        <!-- Submit button -->
+        <div class="d-flex justify-content-center"><button type="submit" class="btn btn-primary  btn-block mb-4"
+            style="width:50%;" onclick="writeUserDataWithCompletion()">Register</button></div>
+
+        </script>
+
+      </form>
+    </div>
+  </div>
+  <!-- Video Gallery -->
+  <div class="row p-5 d-flex justify-content-center text-center" id="resultState"  style="display: none;">
+  <div class=" col-12">
+    <!-- <h5 style="font-family: 'Montserrat', serif;">Response has been submitted successfully!</h5> -->
+  </div>
+</div>
+  <!-- Gallery -->
+  <div class="row">
+    <div class="col-lg-4 col-md-12 mb-2 mb-lg-0">
+      <img src="./assets/images/gallery/KCT_6317.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="./assets/images/gallery/KCT_6314.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-2 mb-lg-0">
+      <img src="./assets/images/gallery/KCT_6333.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="./assets/images/gallery/KCT_6379.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-2 ">
+      <!-- this one -->
+      <img src="./assets/images/gallery/KCT_6452.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="./assets/images/gallery/KCT_6322.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    </div>
+  </div>
+  <!-- Gallery -->
+  <!-- Members -->
+  <div>
+    <div>
+      <h2 class="d-flex justify-content-center p-5 ">Office Bearers</h2>
+    </div>
+    <div class="container-md">
+      <div class="row d-flex justify-content-start">
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/divi1.png" alt="Image" class="img-fluid" id="president"
+            style="border-radius: 50%;width: 50%;height:auto;">
+
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Abissek</strong></span> <br>President</label>
+
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/pavan1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Pavan V</strong> </span><br><span>Treasurer</span></label>
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/dimple1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Dimple</strong></span><span><br>Alumni<br> Coordinator</span></label>
+
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/kaavya1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Kaavya</strong></span><br><span>PRO</span></label>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/hariharan1.png" alt="Image" class="img-fluid" id="president"
+            style="border-radius: 50%;width: 50%;height:auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Hariharan S</strong></span><br><span>Media<br> Organizer</span></label>
+
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/nikhilesh1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Nikhilesh</strong></span> <br><span>Editing<br>Organizer</span></label>
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/krubha1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Krubha</strong></span><br><span>Content<br>Creator</span></label>
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/hari1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Hariharan N</strong></span><br><span>Marketing<br>Analyst</span></label>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3  mb-3">
+          <img src="./assets/images/members/swetha1.png" alt="Image" class="img-fluid" id="president"
+            style="border-radius: 50%;width: 50%;height:auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Swetha</strong></span><br><span>Data Analyst</span></label>
+
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/divi1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size: 110%;"><strong>Dividarshan</strong></span><br><span>Development<br>Innovator
+            </span></label>
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/deepthi1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size:110%;"><strong>Deepthikka</strong></span><br><span>Costume<br>Advisor</span></label>
+        </div>
+        <div class="col-md-3 mb-3">
+          <img src="./assets/images/members/Shruthi1.png" alt="Image" class="img-fluid"
+            style="border-radius: 50%;width: 50%;height: auto;">
+          <label for="president" style="padding-left: 10%;font-family: 'Montserrat', serif;"><span
+              style="font-size: 110%;"><strong>Shruthi</strong></span><br><span>Event<br> Organizer</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class=" text-center text-white pt-5" style="background-color: rgba(0,0,0,0.8);">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4 pb-2">
+        <h5 class="pb-4" style=" font-family: 'Montserrat', serif;">Follow us on</h4>
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/TeamEvokeKCT" target="_blank"
+            role="button"><i class="fab fa-facebook-f"></i>
+          </a>
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/evoke_family" target="_blank"
+            role="button">
+            <i class="fab fa-twitter"></i></a>
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/team_evoke?utm_medium=copy_link"
+            target="_blank" role="button"><i class="fab fa-instagram"></i></a>
+
+          <!-- Youtube -->
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1"
+            href="https://www.youtube.com/channel/UCo6WNDei9ckEtol5ZZmaIhg" target="_blank" role="button"><i
+              class="fab fa-youtube"></i></a>
+      </section>
+      <!-- Section: Social media -->
+      <div>
+        <!-- <i class="fas fa-phone-square fa-lg"> -->
+        <p style=" font-family: 'Montserrat', serif;"><strong>Contact</strong< /p><br>
+            <p style="font-family: 'Montserrat' serif;">Abissek 9487584054</p>
+            <p style="font-family: 'Montserrat' serif;">Dimple Kanna 6379701882</p>
+      </div>
+    </div>
+    <!-- Section: Form -->
+    <section class="">
+      <form method="POST" onsubmit="return false;">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline bg-light rounded form-black mb-4" style="border: 0 0 0 5%;">
+              <input type="email" id="subscription" class="form-control" placeholder="Email" />
+
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4" onclick="subscription()">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+    <!-- Grid container -->
+
+
+  </footer>
+
+  <script type="text/javascript">
+    function togglePopup() {
+      document.getElementById("popup-1").classList.toggle("active");
+    }
+  </script>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/8.8.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+  <script src="/__/firebase/8.8.1/firebase-database.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/8.8.1/firebase-auth.js"></script>
+  <script src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+
+  <script src="/__/firebase/init.js"></script>
+
+  <script type="text/javascript">
+    function signout() {
+      firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
+
+    window.onload = function () {
+      userState();
+    };
+
+    function userState() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (!user) {
+          window.location = '/index.html';
+        } else {
+          document.getElementById('fullName').value = user.displayName;
+          document.getElementById('emailAddress').value = user.email;
+          if (/^([0-9]{2}[A-Z]{3}[0-9]{3}\b)$/.test(user.displayName.slice(user.displayName.length - 8))) {
+            document.getElementById('rollNumber').value = user.displayName.slice(user.displayName.length - 8);
+            document.getElementById('rollNumber').disabled = true;
+            document.getElementById('rollLabel').hidden = true;
+
+            document.getElementById('yearOfStudy').value = (21 - user.displayName.slice(user.displayName.length - 8).slice(0, 2)) + 1;
+          }
+          else {
+            document.getElementById('rollNumber').disabled = false;
+            document.getElementById('rollLabel').hidden = false;
+          }
+          const uid = firebase.auth().currentUser.uid;
+          firebase.firestore().collection('audition').where("uid", "==", uid).get()
+            .then((querySnapshot) => {
+              if (querySnapshot.docs.length == 0) {
+                console.log('loaded');
+                document.getElementById('formState').style.display = "block";
+                document.getElementById('resultState').remove();
+              } else {
+                console.log('not loaded');
+                document.getElementById('formState').remove();
+                document.getElementById('resultState').innerHTML +="<p>"+ "Your entries have been successfully registered.Results will be updated on our Instagram page."+"<br>"+
+                "<a href='https://instagram.com/team_evoke?utm_medium=copy_link'>@team_evoke</a>"+"</p>";
+              } 
+            })
+            .catch((error) => {
+              console.log("Error getting documents: ", error);
+            });
+        }
+      });
+    }
+
+    function writeUserDataWithCompletion() {
+      console.log('write');
+      const user = document.getElementById('fullName').value;
+      const email = document.getElementById('emailAddress').value;
+      const rollno = document.getElementById('rollNumber').value;
+      const phnno = document.getElementById('phoneNumber').value;
+      const Programme = document.getElementById('departmentOfStudy').value;
+      const yearOfStudy = document.getElementById('yearOfStudy').value;
+      const link = document.getElementById('oneDriveLink').value;
+      const uid = firebase.auth().currentUser.uid;
+      const emailLogged = firebase.auth().currentUser.email;
+      if (Programme == "" || Programme == "Programme") {
+        alert("Please choose you Programme");
+      }
+      if (user != "" && email != "" && rollno != "" && phnno != "" && Programme != "" && Programme != "Programme" && yearOfStudy != "" && link != "") {
+        firebase.firestore().collection('audition').doc(uid).set({
+          uid: uid,
+          emailLogged: emailLogged,
+          username: user,
+          email: email,
+          rollNumber: rollno,
+          phoneNumber: phnno,
+          department: Programme,
+          yearOfStudy: yearOfStudy,
+          oneDriveLink: link
+        }).then(() => {
+          location.reload();
+        });
+        // [END rtdb_write_new_user_completion]
+      }
+    }
+    function subscription() {
+      console.log('hello');
+      subEmail = document.getElementById('subscription').value;
+      firebase.firestore().collection('subscriptions').add({
+        email: subEmail,
+      }).then(() => {
+        console.log('s');
+        alert('Successfully subscribed');
+      });
+      document.getElementById('subscription').value = null;
+    }
+  </script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
